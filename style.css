@@ -433,6 +433,150 @@ footer{
     font-weight: bold;
 }
 
+.contact-card{
+    max-width: fit-content;
+
+    margin: 15px auto 0;
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+            inset 0 0 20px rgba(255, 209, 240, 0.35),
+            0 0 15px rgba(197, 140, 255, 0.55);
+
+    transition: 0.5s;
+}
+
+.contact-card:hover{
+    background: rgba(255, 209, 240, 0.08);
+}
+
+.contact-card ul{
+    padding: 15px;
+
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.contact-card ul li{
+    cursor: pointer;
+    position: relative;
+}
+
+.svg{
+    transition: all 0.3s;
+
+    padding: 14px;
+
+    height: 60px;
+    width: 60px;
+
+    border-radius: 100%;
+
+    color: #ffd1f0;
+    fill: currentColor;
+
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 155, 210, 0.7),
+            rgba(185, 92, 217, 0.7),
+            rgba(125, 63, 199, 0.7)
+    );
+
+    box-shadow:
+            inset 0 0 15px rgba(255, 255, 255, 0.45),
+            0 0 12px rgba(255, 155, 210, 0.65);
+}
+
+.text{
+    opacity: 0;
+
+    border-radius: 8px;
+
+    padding: 5px 9px;
+
+    transition: all 0.3s;
+
+    color: white;
+
+    background-color: rgba(43, 24, 56, 0.75);
+
+    position: absolute;
+    z-index: 9999;
+
+    box-shadow:
+            0 0 10px rgba(255, 155, 210, 0.7),
+            inset 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+.iso-pro{
+    transition: 0.5s;
+}
+
+.iso-pro:hover a > .svg{
+    transform: translate(15px, -15px);
+
+    border-radius: 100%;
+}
+
+.iso-pro:hover .text{
+    opacity: 1;
+
+    transform: translate(22px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg{
+    transform: translate(5px, -5px);
+}
+
+.iso-pro span{
+    opacity: 0;
+
+    position: absolute;
+
+    color: #ff9bd2;
+    border-color: #ff9bd2;
+
+    box-shadow:
+            inset 0 0 15px rgba(255, 255, 255, 0.35),
+            0 0 12px rgba(197, 140, 255, 0.6);
+
+    border-radius: 50%;
+
+    transition: all 0.3s;
+
+    height: 60px;
+    width: 60px;
+}
+
+.iso-pro:hover span{
+    opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1){
+    opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2){
+    opacity: 0.4;
+
+    transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3){
+    opacity: 0.6;
+
+    transform: translate(10px, -10px);
+}
+
 /*АДАПТИВНІСТЬ*/
 
 @media (max-width: 900px){
